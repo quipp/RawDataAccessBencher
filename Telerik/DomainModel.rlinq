@@ -603,7 +603,7 @@
           <orm:column name="ModifiedDate" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
         </orm:field>
         <orm:field name="_salesOrderHeaders" property="SalesOrderHeaders" behavior="readwrite" uniqueId="81215018-042a-428a-84de-497fe0342996" type="Telerik.Bencher.Model.SalesOrderHeader">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_shipMethod" order-by="" uniqueId="835eb531-17d8-42a0-be96-560d010204d5" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_shipMethod" managed="true" order-by="" uniqueId="835eb531-17d8-42a0-be96-560d010204d5" />
         </orm:field>
         <orm:field name="_purchaseOrderHeaders" property="PurchaseOrderHeaders" behavior="readwrite" uniqueId="d5fd4b15-b497-45e3-9954-9c54c72c63b6" type="Telerik.Bencher.Model.PurchaseOrderHeader">
           <orm:collection element-class="Telerik.Bencher.Model.PurchaseOrderHeader" inverse-field="_shipMethod" order-by="" uniqueId="9769d4d3-d512-49e3-93fd-874e3fadb152" />
@@ -788,7 +788,7 @@
           <orm:collection element-class="Telerik.Bencher.Model.SalesPerson" inverse-field="_salesTerritory" order-by="" uniqueId="1413c154-a0f3-4225-a9c3-ad57b2ba0e94" />
         </orm:field>
         <orm:field name="_salesOrderHeaders" property="SalesOrderHeaders" behavior="readwrite" uniqueId="a099fb8a-1139-42a5-b9c3-1b4c05de4899" type="Telerik.Bencher.Model.SalesOrderHeader">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_salesTerritory" order-by="" uniqueId="d965251f-2190-464b-aa1d-55aad4d3818d" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_salesTerritory" managed="true" order-by="" uniqueId="d965251f-2190-464b-aa1d-55aad4d3818d" />
         </orm:field>
         <orm:field name="_customers" property="Customers" behavior="readwrite" uniqueId="c35c6231-44f2-41d0-b1b6-6e627f70f0da" type="Telerik.Bencher.Model.Customer">
           <orm:collection element-class="Telerik.Bencher.Model.Customer" inverse-field="_salesTerritory" order-by="" uniqueId="938da3a5-7e9d-41ed-82d5-2a4194533aa6" />
@@ -970,7 +970,7 @@
           <orm:collection element-class="Telerik.Bencher.Model.SalesPersonQuotaHistory" inverse-field="_salesPerson" order-by="" uniqueId="1f08ed1c-ce6c-4d0c-a2c5-47fd924e8a22" />
         </orm:field>
         <orm:field name="_salesOrderHeaders" property="SalesOrderHeaders" behavior="readwrite" uniqueId="2c0bdda1-3f53-47ac-a1d8-c0b2ec6b2a6b" type="Telerik.Bencher.Model.SalesOrderHeader">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_salesPerson" order-by="" uniqueId="39f9e77d-a57c-4ee5-afb4-d17aeca9d3b3" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_salesPerson" managed="true" order-by="" uniqueId="39f9e77d-a57c-4ee5-afb4-d17aeca9d3b3" />
         </orm:field>
         <orm:index name="AK_SalesPerson_rowguid" unique="true">
           <orm:columnMapping>
@@ -1145,10 +1145,10 @@
           </orm:reference>
         </orm:field>
         <orm:field name="_salesOrderHeaderSalesReasons" property="SalesOrderHeaderSalesReasons" behavior="readwrite" uniqueId="aec37b70-f8da-464e-97c2-ba9892eb4d86" type="Telerik.Bencher.Model.SalesOrderHeaderSalesReason">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeaderSalesReason" inverse-field="_salesOrderHeader" order-by="" uniqueId="08c53982-8132-49fc-8220-425fc23f5769" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeaderSalesReason" inverse-field="_salesOrderHeader" managed="true" order-by="" uniqueId="08c53982-8132-49fc-8220-425fc23f5769" />
         </orm:field>
         <orm:field name="_salesOrderDetails" property="SalesOrderDetails" behavior="readwrite" uniqueId="7953e90c-45ad-48cc-8b14-373d2e14863b" type="Telerik.Bencher.Model.SalesOrderDetail">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderDetail" inverse-field="_salesOrderHeader" order-by="" uniqueId="d73f5a05-a6ef-4b56-abd5-f3f29819795f" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderDetail" inverse-field="_salesOrderHeader" managed="true" order-by="" uniqueId="d73f5a05-a6ef-4b56-abd5-f3f29819795f" />
         </orm:field>
         <orm:index name="AK_SalesOrderHeader_SalesOrderNumber" unique="true">
           <orm:columnMapping>
@@ -2675,7 +2675,7 @@
           </orm:reference>
         </orm:field>
         <orm:field name="_salesOrderHeaders" property="SalesOrderHeaders" behavior="readwrite" uniqueId="efb6d67b-683e-4ee7-bd61-689202f20da9" type="Telerik.Bencher.Model.SalesOrderHeader">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_customer" order-by="" uniqueId="3aa10da8-ed09-420b-aa0b-88c2f5903eb0" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_customer" managed="true" order-by="" uniqueId="3aa10da8-ed09-420b-aa0b-88c2f5903eb0" />
         </orm:field>
         <orm:index name="AK_Customer_AccountNumber" unique="true">
           <orm:columnMapping>
@@ -2736,7 +2736,7 @@
           </orm:reference>
         </orm:field>
         <orm:field name="_salesOrderHeaders" property="SalesOrderHeaders" behavior="readwrite" uniqueId="13b41718-1faa-47fd-97d3-2e4012ac05d4" type="Telerik.Bencher.Model.SalesOrderHeader">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_currencyRate" order-by="" uniqueId="34e3cedd-4cf9-4930-a03b-9ae914db2161" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_currencyRate" managed="true" order-by="" uniqueId="34e3cedd-4cf9-4930-a03b-9ae914db2161" />
         </orm:field>
         <orm:index name="AK_CurrencyRate_CurrencyRateDate_FromCurrencyCode_ToCurrencyCode" unique="true">
           <orm:columnMapping>
@@ -2832,7 +2832,7 @@
           <orm:column name="ModifiedDate" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
         </orm:field>
         <orm:field name="_salesOrderHeaders" property="SalesOrderHeaders" behavior="readwrite" uniqueId="fb2af4aa-8322-4820-b1ad-467ace9bd998" type="Telerik.Bencher.Model.SalesOrderHeader">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_creditCard" order-by="" uniqueId="7aad39b6-d218-4417-8a94-5ecfd34d9ad6" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_creditCard" managed="true" order-by="" uniqueId="7aad39b6-d218-4417-8a94-5ecfd34d9ad6" />
         </orm:field>
         <orm:field name="_personCreditCards" property="PersonCreditCards" behavior="readwrite" uniqueId="ff3f272b-340e-4acd-9107-7f2e3621d550" type="Telerik.Bencher.Model.PersonCreditCard">
           <orm:collection element-class="Telerik.Bencher.Model.PersonCreditCard" inverse-field="_creditCard" order-by="" uniqueId="ee117478-ba90-4df2-8b23-f15084fd79f2" />
@@ -3242,10 +3242,10 @@
           </orm:reference>
         </orm:field>
         <orm:field name="_salesOrderHeaders" property="SalesOrderHeaders" behavior="readwrite" uniqueId="95ea5720-918f-4194-99c5-e25426011185" type="Telerik.Bencher.Model.SalesOrderHeader">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_address" order-by="" uniqueId="7164230f-7509-4775-b65e-79d54333c151" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_address" managed="true" order-by="" uniqueId="7164230f-7509-4775-b65e-79d54333c151" />
         </orm:field>
         <orm:field name="_salesOrderHeaders1" property="SalesOrderHeaders1" behavior="readwrite" uniqueId="4f61a646-8cd9-41fe-8cb1-fd4209d61f5e" type="Telerik.Bencher.Model.SalesOrderHeader">
-          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_address1" order-by="" uniqueId="9b0f0252-2854-4e33-9371-090ac9b5563f" />
+          <orm:collection element-class="Telerik.Bencher.Model.SalesOrderHeader" inverse-field="_address1" managed="true" order-by="" uniqueId="9b0f0252-2854-4e33-9371-090ac9b5563f" />
         </orm:field>
         <orm:field name="_businessEntityAddresses" property="BusinessEntityAddresses" behavior="readwrite" uniqueId="e349bed1-8263-429a-b251-934bc69bad74" type="Telerik.Bencher.Model.BusinessEntityAddress">
           <orm:collection element-class="Telerik.Bencher.Model.BusinessEntityAddress" inverse-field="_address" order-by="" uniqueId="54dd42eb-107c-46a3-8ada-b12498fb478e" />
@@ -5138,7 +5138,7 @@
       <Property Id="fd489824-7c85-473d-beba-b92818b1786c" name="ShipRate" type="Decimal" label="ShipRate : Decimal" kind="Persistent" fieldName="_shipRate" />
       <navigationalProperties>
         <classHasNavigationalProperties Id="67884694-0d55-4645-9bec-b77589cde6a7">
-          <NavigationalProperty Id="81215018-042a-428a-84de-497fe0342996" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="81215018-042a-428a-84de-497fe0342996" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="88fc122a-ba14-482a-8ea7-9ba5e485ae6b">
           <NavigationalProperty Id="d5fd4b15-b497-45e3-9954-9c54c72c63b6" name="PurchaseOrderHeaders" type="IList&lt;PurchaseOrderHeader&gt;" label="PurchaseOrderHeaders : IList&lt;PurchaseOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_purchaseOrderHeaders" isDependent="false" isManaged="false" />
@@ -5251,7 +5251,7 @@
           <NavigationalProperty Id="bfd12147-d250-4fa0-ba25-3db4f189bebc" name="SalesPeople" type="IList&lt;SalesPerson&gt;" label="SalesPeople : IList&lt;SalesPerson&gt;" nullable="true" kind="Persistent" fieldName="_salesPeople" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="c24eae7b-8ce8-444d-a8c0-274c47837c2f">
-          <NavigationalProperty Id="a099fb8a-1139-42a5-b9c3-1b4c05de4899" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="a099fb8a-1139-42a5-b9c3-1b4c05de4899" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="1487d87c-c05f-49d2-a5e3-5ea86ad68ed5">
           <NavigationalProperty Id="c35c6231-44f2-41d0-b1b6-6e627f70f0da" name="Customers" type="IList&lt;Customer&gt;" label="Customers : IList&lt;Customer&gt;" nullable="true" kind="Persistent" fieldName="_customers" isDependent="false" isManaged="false" />
@@ -5380,7 +5380,7 @@
           <NavigationalProperty Id="745123dc-280a-42d7-9128-720d82e0d7c9" name="SalesTerritory" type="SalesTerritory" label="SalesTerritory : SalesTerritory" nullable="true" kind="Persistent" fieldName="_salesTerritory" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="42d54b7e-b709-43dd-9d80-6e622ebda5c1">
-          <NavigationalProperty Id="2c0bdda1-3f53-47ac-a1d8-c0b2ec6b2a6b" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="2c0bdda1-3f53-47ac-a1d8-c0b2ec6b2a6b" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
@@ -5418,7 +5418,7 @@
       </AssociationTargets>
       <navigationalProperties>
         <classHasNavigationalProperties Id="312967bf-dd83-4e4c-aa2b-7c3ef36d5c85">
-          <NavigationalProperty Id="1d2408a5-191a-4849-b9a3-9dd6d57ce665" name="SalesOrderHeader" type="SalesOrderHeader" label="SalesOrderHeader : SalesOrderHeader" nullable="true" kind="Persistent" fieldName="_salesOrderHeader" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="1d2408a5-191a-4849-b9a3-9dd6d57ce665" name="SalesOrderHeader" type="SalesOrderHeader" label="SalesOrderHeader : SalesOrderHeader" nullable="true" kind="Persistent" fieldName="_salesOrderHeader" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="b97f0d28-1ca1-4fb2-9d5a-c099dd9b2bac">
           <NavigationalProperty Id="06b38743-1b47-49e0-8e42-43f71fb98667" name="SalesReason" type="SalesReason" label="SalesReason : SalesReason" nullable="true" kind="Persistent" fieldName="_salesReason" isDependent="false" isManaged="false" />
@@ -5560,34 +5560,34 @@
       </AssociationTargets>
       <navigationalProperties>
         <classHasNavigationalProperties Id="dfbda9b1-cafd-4812-b186-acfeee8a1bc5">
-          <NavigationalProperty Id="aec37b70-f8da-464e-97c2-ba9892eb4d86" name="SalesOrderHeaderSalesReasons" type="IList&lt;SalesOrderHeaderSalesReason&gt;" label="SalesOrderHeaderSalesReasons : IList&lt;SalesOrderHeaderSalesReason&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaderSalesReasons" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="aec37b70-f8da-464e-97c2-ba9892eb4d86" name="SalesOrderHeaderSalesReasons" type="IList&lt;SalesOrderHeaderSalesReason&gt;" label="SalesOrderHeaderSalesReasons : IList&lt;SalesOrderHeaderSalesReason&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaderSalesReasons" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="67d50455-c79a-40a5-b798-ade1903d239d">
-          <NavigationalProperty Id="4d7f64cc-b2a5-4b3d-bd15-5ac7d6bd937f" name="Address" type="Address" label="Address : Address" nullable="true" kind="Persistent" fieldName="_address" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="4d7f64cc-b2a5-4b3d-bd15-5ac7d6bd937f" name="Address" type="Address" label="Address : Address" nullable="true" kind="Persistent" fieldName="_address" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="60dcd1b0-7c5a-4402-87d4-c3a91f0cfa34">
-          <NavigationalProperty Id="209d40e1-df9a-4dd9-b8c4-641fe42ea199" name="Address1" type="Address" label="Address1 : Address" nullable="true" kind="Persistent" fieldName="_address1" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="209d40e1-df9a-4dd9-b8c4-641fe42ea199" name="Address1" type="Address" label="Address1 : Address" nullable="true" kind="Persistent" fieldName="_address1" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="13bba5d4-50ae-4074-89be-6c55f4cc8649">
-          <NavigationalProperty Id="48c41f07-6047-435e-8958-6a36f304f99d" name="CreditCard" type="CreditCard" label="CreditCard : CreditCard" nullable="true" kind="Persistent" fieldName="_creditCard" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="48c41f07-6047-435e-8958-6a36f304f99d" name="CreditCard" type="CreditCard" label="CreditCard : CreditCard" nullable="true" kind="Persistent" fieldName="_creditCard" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="ad38f666-a440-41d8-95d5-9626debaf7eb">
-          <NavigationalProperty Id="d04a7dd6-a2bd-4678-bd1e-01eb5b3528a1" name="CurrencyRate" type="CurrencyRate" label="CurrencyRate : CurrencyRate" nullable="true" kind="Persistent" fieldName="_currencyRate" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="d04a7dd6-a2bd-4678-bd1e-01eb5b3528a1" name="CurrencyRate" type="CurrencyRate" label="CurrencyRate : CurrencyRate" nullable="true" kind="Persistent" fieldName="_currencyRate" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="c5af23a7-c7b6-4279-9cf1-ff0ae02f3490">
-          <NavigationalProperty Id="4112b562-c02c-4121-8249-4357837aa7c4" name="Customer" type="Customer" label="Customer : Customer" nullable="true" kind="Persistent" fieldName="_customer" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="4112b562-c02c-4121-8249-4357837aa7c4" name="Customer" type="Customer" label="Customer : Customer" nullable="true" kind="Persistent" fieldName="_customer" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="86822472-3b4e-46b8-a570-a22441d47e45">
-          <NavigationalProperty Id="98d7180e-d4d2-4f1d-814b-b2658eaeb8f4" name="SalesPerson" type="SalesPerson" label="SalesPerson : SalesPerson" nullable="true" kind="Persistent" fieldName="_salesPerson" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="98d7180e-d4d2-4f1d-814b-b2658eaeb8f4" name="SalesPerson" type="SalesPerson" label="SalesPerson : SalesPerson" nullable="true" kind="Persistent" fieldName="_salesPerson" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="adfcfc49-7acb-4c06-98ff-bff827d2289b">
-          <NavigationalProperty Id="36ee78a3-2b1d-4d12-b096-f754e50a2971" name="SalesTerritory" type="SalesTerritory" label="SalesTerritory : SalesTerritory" nullable="true" kind="Persistent" fieldName="_salesTerritory" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="36ee78a3-2b1d-4d12-b096-f754e50a2971" name="SalesTerritory" type="SalesTerritory" label="SalesTerritory : SalesTerritory" nullable="true" kind="Persistent" fieldName="_salesTerritory" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="a6aa888e-4766-46d1-8b32-7e9449624bac">
-          <NavigationalProperty Id="e1b7d530-3f6d-4a75-bd78-8d17fd710349" name="ShipMethod" type="ShipMethod" label="ShipMethod : ShipMethod" nullable="true" kind="Persistent" fieldName="_shipMethod" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="e1b7d530-3f6d-4a75-bd78-8d17fd710349" name="ShipMethod" type="ShipMethod" label="ShipMethod : ShipMethod" nullable="true" kind="Persistent" fieldName="_shipMethod" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="9f3c1707-a69a-479a-bf8a-e5fd8a5d107a">
-          <NavigationalProperty Id="7953e90c-45ad-48cc-8b14-373d2e14863b" name="SalesOrderDetails" type="IList&lt;SalesOrderDetail&gt;" label="SalesOrderDetails : IList&lt;SalesOrderDetail&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderDetails" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="7953e90c-45ad-48cc-8b14-373d2e14863b" name="SalesOrderDetails" type="IList&lt;SalesOrderDetail&gt;" label="SalesOrderDetails : IList&lt;SalesOrderDetail&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderDetails" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
@@ -5633,7 +5633,7 @@
       </AssociationTargets>
       <navigationalProperties>
         <classHasNavigationalProperties Id="70612848-95b1-464a-a23a-015948002520">
-          <NavigationalProperty Id="fc2ad40f-d1d2-4fc4-9320-48210690ad17" name="SalesOrderHeader" type="SalesOrderHeader" label="SalesOrderHeader : SalesOrderHeader" nullable="true" kind="Persistent" fieldName="_salesOrderHeader" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="fc2ad40f-d1d2-4fc4-9320-48210690ad17" name="SalesOrderHeader" type="SalesOrderHeader" label="SalesOrderHeader : SalesOrderHeader" nullable="true" kind="Persistent" fieldName="_salesOrderHeader" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="ab776af4-40d9-43a1-b52c-3bb56d5de38b">
           <NavigationalProperty Id="2a337ea6-0032-429b-8ec0-ef1cec00d3ca" name="SpecialOfferProduct" type="SpecialOfferProduct" label="SpecialOfferProduct : SpecialOfferProduct" nullable="true" kind="Persistent" fieldName="_specialOfferProduct" isDependent="false" isManaged="false" />
@@ -6768,7 +6768,7 @@
       </AssociationTargets>
       <navigationalProperties>
         <classHasNavigationalProperties Id="900f28e7-5b66-466d-ab5d-ea874dff2849">
-          <NavigationalProperty Id="efb6d67b-683e-4ee7-bd61-689202f20da9" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="efb6d67b-683e-4ee7-bd61-689202f20da9" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="cdb89f4d-458d-4e56-b51a-267e9a1607c3">
           <NavigationalProperty Id="5d94dd0b-f7fd-49b8-a7a3-529c1dfd629e" name="Person" type="Person" label="Person : Person" nullable="true" kind="Persistent" fieldName="_person" isDependent="false" isManaged="false" />
@@ -6819,7 +6819,7 @@
       </AssociationTargets>
       <navigationalProperties>
         <classHasNavigationalProperties Id="5dbe599c-73ff-4985-9a92-230f4d2e9063">
-          <NavigationalProperty Id="13b41718-1faa-47fd-97d3-2e4012ac05d4" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="13b41718-1faa-47fd-97d3-2e4012ac05d4" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="96136170-daf6-4a5a-ab83-4f61d30aa481">
           <NavigationalProperty Id="81546be2-6088-440b-9202-09c6b577c6c6" name="Currency" type="Currency" label="Currency : Currency" nullable="true" kind="Persistent" fieldName="_currency" isDependent="false" isManaged="false" />
@@ -6864,7 +6864,7 @@
       <Property Id="8808cc64-d77b-4583-9cc2-2c1eba99445f" name="ModifiedDate" type="DateTime" label="ModifiedDate : DateTime" kind="Persistent" fieldName="_modifiedDate" />
       <navigationalProperties>
         <classHasNavigationalProperties Id="b6ee8052-3fd1-4c3c-ab19-bb0e4982af0a">
-          <NavigationalProperty Id="fb2af4aa-8322-4820-b1ad-467ace9bd998" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="fb2af4aa-8322-4820-b1ad-467ace9bd998" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="3a933f2b-70ed-4717-adde-0b4de3f8b9cb">
           <NavigationalProperty Id="ff3f272b-340e-4acd-9107-7f2e3621d550" name="PersonCreditCards" type="IList&lt;PersonCreditCard&gt;" label="PersonCreditCards : IList&lt;PersonCreditCard&gt;" nullable="true" kind="Persistent" fieldName="_personCreditCards" isDependent="false" isManaged="false" />
@@ -7179,10 +7179,10 @@
       </AssociationTargets>
       <navigationalProperties>
         <classHasNavigationalProperties Id="f7e9e736-791a-4d68-b6a5-12620cc26fd4">
-          <NavigationalProperty Id="95ea5720-918f-4194-99c5-e25426011185" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="95ea5720-918f-4194-99c5-e25426011185" name="SalesOrderHeaders" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="dbece4f8-86e9-4a2a-95fa-e71472333f18">
-          <NavigationalProperty Id="4f61a646-8cd9-41fe-8cb1-fd4209d61f5e" name="SalesOrderHeaders1" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders1 : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders1" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="4f61a646-8cd9-41fe-8cb1-fd4209d61f5e" name="SalesOrderHeaders1" type="IList&lt;SalesOrderHeader&gt;" label="SalesOrderHeaders1 : IList&lt;SalesOrderHeader&gt;" nullable="true" kind="Persistent" fieldName="_salesOrderHeaders1" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="ae2d45d4-f2e9-44de-8a6f-2eb2661e1893">
           <NavigationalProperty Id="e349bed1-8263-429a-b251-934bc69bad74" name="BusinessEntityAddresses" type="IList&lt;BusinessEntityAddress&gt;" label="BusinessEntityAddresses : IList&lt;BusinessEntityAddress&gt;" nullable="true" kind="Persistent" fieldName="_businessEntityAddresses" isDependent="false" isManaged="false" />

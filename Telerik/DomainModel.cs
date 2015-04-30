@@ -585,8 +585,18 @@ namespace Telerik.Bencher.Model
 			backend.Backend = "MsSql";
 			backend.ProviderName = "System.Data.SqlClient";
 			backend.Logging.MetricStoreSnapshotInterval = 0;
+		
+			CustomizeBackendConfiguration(ref backend);
+		
 			return backend;
 		}
+		
+		/// <summary>
+		/// Allows you to customize the BackendConfiguration of DomainModel.
+		/// </summary>
+		/// <param name="config">The BackendConfiguration of DomainModel.</param>
+		static partial void CustomizeBackendConfiguration(ref BackendConfiguration config);
+		
 	}
 	
 	public interface IDomainModelUnitOfWork : IUnitOfWork
