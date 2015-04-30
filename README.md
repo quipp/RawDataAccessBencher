@@ -1,5 +1,7 @@
 RawDataAccessBencher
 ====================
+This is a fork of FransBouma's original project.  Added logging of results to text file (instead of all to console).  Made the test more rigorous by adding a table join and turning on IsManaged for foreign key constraints for Telerik Data Access test.  Turns out that Telerik is still several times faster than Entity Framework.  Still not sure it's worth it because Telerik Data Access is poor support for using old versions without paying and it less populer (developers less familiar).
+
 Bench code which tests entity materialization speed of various .NET data access / ORM implementations. The tests focus solely on entity / object materialization and therefore don't do any fancy queries, graph fetches or other nice things which one expects from ORMs. It's not a scientific benchmark system, but an indication to see which framework is fast and which is slow compared to each other. See for more details about what this test is not: http://weblogs.asp.net/fbouma/archive/2014/02/13/re-create-benchmarks-and-results-that-have-value.aspx
 
 ### Results ###
